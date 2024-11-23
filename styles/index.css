@@ -8,8 +8,16 @@
 }
 
 body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
     padding-top: 100px;
-    background-color: black;
+    background:linear-gradient(black,rgb(50, 50, 50));
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size:contain;
     width: 100%;
 }
 
@@ -26,7 +34,7 @@ nav {
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    height: 100px;
+    height: 90px;
     align-items: center;
     border-bottom: 1px solid white;
 }
@@ -53,7 +61,7 @@ nav ul a {
     text-decoration: none;
     color: white;
     height: fit-content;
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     font-weight: 250;
 }
 
@@ -71,8 +79,8 @@ nav ul a {
     color: white;
 }
 
-.logo h2 {
-    font-size: 3rem;
+.logo h1 {
+    font-size: 2.7rem;
     font-weight: 250;
 }
 
@@ -87,39 +95,52 @@ nav ul a {
 
 form {
     /* background-color: rgb(43, 214, 13); */
-    margin-top: 50px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 100%;
+    height: 120%;
 }
 
 form input ,form textarea{
     /* background-color: aquamarine; */
+    display: flex;
+    align-items: center;
     width: 25%;
-    height: 55px;
+    height: 120px;
     margin: 10px;
     border-radius: 2px;
     font-weight: 300;
     background-color: black;
     border: 1px solid rgba(255, 255, 255, 0.251);
     outline: none;
-    font-size: 25px;
+    font-size: 1.3rem;
     box-sizing: border-box;
     padding: 10px;
     color: white;
+    transition: all 0.4s ease-in-out;
+}
+
+form input:focus,form textarea:focus{
+    border: 1px solid white;
 }
 
 form textarea{
-    height: 300px;
+    height: 400px;
 }
 ::placeholder {
-    font-size: 25px;
-    color: white;
+    font-size: 1.3rem;
+    color: rgb(192, 192, 192);
 }
 
 input::-webkit-inner-spin-button, input::-webkit-outer-spin-button{
     display: none;
 }
+
+#sub{
+    background-color: white;
+    color: black;
+    cursor: pointer;
+}
+
