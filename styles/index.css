@@ -35,7 +35,8 @@ li {
 
 nav {
     z-index: 1000;
-    background-color: black;
+    background-color: rgba(64, 64, 64, 0.284);
+    backdrop-filter: blur(5px);
     top: 0;
     position: fixed;
     display: flex;
@@ -65,13 +66,19 @@ nav ul li {
     height: 100%;
 }
 
+nav ul li img{
+    width: 18px;
+    margin-right: 7px;
+}
 nav ul a {
+    display: flex;
+    align-items: center;
     position: relative;
     text-decoration: none;
     color: white;
     height: fit-content;
     font-size: 1.3rem;
-    font-weight: 250;
+    font-weight: 300;
 }
 
 nav ul a::after{
@@ -87,6 +94,18 @@ nav ul a::after{
 
 nav ul a:hover::after{
     width:96%;
+}
+
+.mar1{
+    height: 60px;
+    background-color: white;
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.6rem;
+    word-spacing: 20px;
+    border-bottom: 1px solid var(--bord);
 }
 #l1 {
     /* background-color: aquamarine; */
@@ -104,7 +123,7 @@ nav ul a:hover::after{
 
 .logo h1 {
     font-size: 3rem;
-    font-weight: 300;
+    font-weight: 100;
 }
 
 .con {
@@ -114,6 +133,7 @@ nav ul a:hover::after{
     display: flex;
     justify-content: center;
     align-items: center;
+    border-bottom:1px solid var(--bord) ;
 }
 
 form {
@@ -137,7 +157,7 @@ form .inputs{
     justify-content: center;
     width:100%;
     border-radius: 1px;
-    font-weight: 300;
+    font-weight: 200;
     background-color: black;
     border: 1px solid var(--bord);
     font-size: 1.3rem;
@@ -162,6 +182,7 @@ form .inputs:focus,textarea:focus{
     top: 50%;
     transform: translateY(-50%);
     pointer-events: none;
+    font-weight: 200;
 }
 
 .input-box .inputs:focus ~ span,.input-box .inputs:valid ~ span{
@@ -211,6 +232,7 @@ textarea{
     color: rgb(144, 144, 144);
     cursor: pointer;
     padding: 15px 10px;
+    font-weight: 200;
     background-color:black;
 }
 
@@ -278,7 +300,7 @@ textarea{
     width: 100%;
     white-space: nowrap;
     overflow: hidden;
-    animation: typing 1.8s steps(21),
+    animation: typing 1.8s steps(21) ,
                cursor .4s step-end infinite alternate;
 }
 
@@ -294,9 +316,9 @@ textarea{
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    font-size: 1.5rem;
+    font-size: 1.6rem;
     line-height: 40px;
-    font-weight: 100;
+    font-weight: 250;
     width: 100%;
     height: 400px;
     border-bottom:1px solid var(--bord);
@@ -314,4 +336,98 @@ textarea{
 ::selection{
     background-color: white;
     color: black;
+}
+
+.projects{
+    width: 100%;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    border-bottom:1px solid var(--bord) ;
+}
+.projects h2{
+    display: flex;
+    align-items: center;
+    height: 20%;
+    width: 90%;
+    font-size: 3.5rem;
+    font-weight: 400;
+    animation: slideRight 10s both;
+    animation-timeline: view(70% 5%);
+}
+.proj-cont{
+    width: 100%;
+    height: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.proj-card{
+    transition: all 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    height: 80%;
+    padding: 0px 70px;
+    background-color: black;
+    border: 1px solid var(--bord);
+    box-sizing: border-box;
+    animation: slideRight 10s both;
+    animation-timeline: view(70% 5%);
+}
+
+.proj-card img{
+    transition: all 0.4s ease-in-out;
+    opacity: 0.6;
+    width:190px;
+}
+
+.proj-card:nth-child(1){
+    animation-delay: 1s;
+}
+
+.proj-card:nth-child(2){
+    animation-delay: 2s;
+}
+
+.proj-card:nth-child(3){
+    animation-delay: 4s;
+}
+.proj-card h3{
+    transition: all 0.4s ease-in-out;
+    opacity: 0.6;
+    box-sizing: border-box;
+    font-size: 1.8rem;
+    font-weight: 200;
+}
+.proj-card:hover{
+    border: 1px solid white;
+    box-shadow: 1px 1px 12px rgba(255, 255, 255, 0.4);
+}
+.proj-card:hover img{
+    opacity: 1;
+}
+
+.proj-card:hover h3{
+    opacity: 1;
+}
+a{
+    text-decoration: none;
+}
+
+@keyframes slideRight {
+    from{
+        opacity: 0;
+        filter: blur(10px);
+        transform: translateX(-100%)scale(0.5);
+        transition: all 1s;
+    }
+    to{
+        opacity: 1;
+        filter: blur(0px);
+        transform: translateX(0)scale(1);
+    }
 }

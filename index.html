@@ -7,8 +7,10 @@
     <title>StarterWave</title>
     <link rel="stylesheet" href="styles/index.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Baumans&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Baumans&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Outfit:wght@100..900&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
@@ -19,11 +21,18 @@
             </a>
         </div>
         <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="aboutus.html">About Us</a></li>
-            <li><a href="projects.html">Projects</a></li>
+            <li>
+                <a href="index.html"><img src="img/house-chimney.png" alt="">Home</a>
+            </li>
+            <li>
+                <a href="aboutus.html"><img src="img/info.png" alt="">About Us</a>
+            </li>
+            <li>
+                <a href="projects.html"><img src="img/briefcase.png" alt="">Portfolio</a>
+            </li>
         </ul>
     </nav>
+    <marquee class="mar1" direction="" scrollamount="20">Get Free 6 Months Hosting for your Website!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Get Free 6 Months Hosting for your Website!</marquee>
     <div class="para">
         <p>We are dedicated to delivering a project that exceeds expectations at an affordable cost. As young and
             talented learners, we are driven to create remarkable solutions that stand out in the web world. Trust our
@@ -40,7 +49,7 @@
                 <span>Name</span>
             </div>
             <div class="input-box">
-                <input type="tel" name="mobile" placeholder="" class="inputs" required>
+                <input type="tel" name="mobile" placeholder="" class="inputs" required minlength="10" maxlength="10">
                 <span>Mobile Number</span>
             </div>
             <div class="input-box">
@@ -58,7 +67,50 @@
             <button type="submit" value="Submit" id="sub">Submit</button>
         </form>
     </div>
-    
+    <div class="projects">
+        <h2>Our Crafts:</h2>
+        <div class="proj-cont">
+            <a href="#" class="proj-card">
+                <img src="img/flogo.png" alt="">
+                <img src="img/logo222.png" alt="">
+            </a>
+            <a href="#" class="proj-card">
+                <img src="img/favicon.png" alt="">
+                <img src="img/fulllogotra.png" alt="">
+            </a>
+            <a href="#" class="proj-card">
+                <img src="img/salad.png" alt="">
+                <h3>Food Palace</h3>
+            </a>
+        </div>
+    </div>
+    <div class="services">
+        <h2>Our Services:</h2>
+        <div class="serv-container">
+            <div class="service" id="service1">
+                <img src="img/html.png" alt="">
+                <img src="img/css-3.png" alt="">
+                <img src="img/js.png" alt="">
+                <img src="img/library.png" alt="">
+            </div>
+            <div class="service" id="service2">
+                <img src="img/sql-server.png" alt="">
+                <img src="img/leaf.png">
+                <img src="img/php.png" alt="">
+            </div>
+            <div class="service" id="service3">
+                <img src="img/seo.png" alt="">
+                <img src="img/sem.png" alt="">
+                <img src="img/social-media.png" alt="">
+            </div>
+            <div class="service" id="service4">
+                <img src="img/api.png" alt="">
+                <img src="img/maintainance.png" alt="">
+                <img src="img/customer-support.png" alt="">
+            </div>
+        </div>
+    </div>
+    <script src="script/script.js"></script>
 </body>
 
 </html>
