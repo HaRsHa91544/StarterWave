@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,12 +8,15 @@
     <link rel="stylesheet" href="styles/index.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Baumans&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Outfit:wght@100..900&display=swap" rel="stylesheet">
 </head>
+
 <body>
     <nav>
         <div id="l1">
-            <a class="logo" href="index.html"><h1>StarterWave</h1></a>
+            <a class="logo" href="index.html">
+                <h1>StarterWave</h1>
+            </a>
         </div>
         <ul>
             <li><a href="index.html">Home</a></li>
@@ -20,16 +24,41 @@
             <li><a href="projects.html">Projects</a></li>
         </ul>
     </nav>
+    <div class="para">
+        <p>We are dedicated to delivering a project that exceeds expectations at an affordable cost. As young and
+            talented learners, we are driven to create remarkable solutions that stand out in the web world. Trust our
+            passion and talent to create something extraordinary together!</p>
+        <img src="img/professional-development.png" alt="">
+    </div>
+    <div class="cta">
+        <h2 class="main">Together We’ll Rise !</h2>
+    </div>
     <div class="con">
         <form action="">
-            <input type="text" name="name" placeholder="Your Name">
-            <input type="tel" name="mobile" placeholder="Mobile Number">
-            <input type="email" name="mail" placeholder="Email">
-            <input type="text" name="project" placeholder="Project Name">
-            <input type="number" name="budget" placeholder="Budget">
-            <textarea name="description" placeholder="Describe about the project"></textarea>
-            <input type="submit" id="sub">
+            <div class="input-box">
+                <input type="text" name="name" class="inputs" required>
+                <span>Name</span>
+            </div>
+            <div class="input-box">
+                <input type="tel" name="mobile" placeholder="" class="inputs" required>
+                <span>Mobile Number</span>
+            </div>
+            <div class="input-box">
+                <input type="email" name="mail" placeholder="" class="inputs" required>
+                <span>Email</span>
+            </div>
+            <div class="input-box">
+                <input type="text" name="project" placeholder="" class="inputs" required>
+                <span>Project Name</span>
+            </div>
+            <div class="input-box">
+                <textarea name="description" placeholder="" class="inputs" required></textarea>
+                <span>Describe about the project</span>
+            </div>
+            <button type="submit" value="Submit" id="sub">Submit</button>
         </form>
     </div>
+    
 </body>
+
 </html>
