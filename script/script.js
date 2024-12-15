@@ -1,5 +1,5 @@
 function toScroll() {
-    window.scroll(0, 505);
+    window.scroll(0, 900);
 }
 const sbtn = document.getElementById('sbtn');
 const pcards = document.querySelectorAll('.proj-card');
@@ -8,7 +8,7 @@ const scards=document.querySelectorAll('.service');
 const shead=document.getElementById('shead');
 const foot=document.getElementById('footer');
 window.onscroll = function () {
-    if (window.scrollY > 700) {
+    if (window.scrollY > 1000) {
         pcards.forEach(card => {
             card.style.animation = 'slideRight 1.2s both';
             card.style.opacity = '1';
@@ -16,7 +16,7 @@ window.onscroll = function () {
         projh.style.opacity = '1';
         projh.style.animation = 'slideRight 1s both';
     }
-    if (window.scrollY > 1200) {
+    if (window.scrollY > 1600) {
         
         scards.forEach(card => {
             card.style.animation = 'servani 1.2s both';
@@ -25,7 +25,7 @@ window.onscroll = function () {
         shead.style.opacity = '1';
         shead.style.animation = 'slideRight 1s both';
     }
-    if (window.scrollY > 520) {
+    if (window.scrollY > 30) {
         sbtn.style.transform = 'translateX(0%) scale(1)';
     }
     else {
