@@ -290,7 +290,8 @@ textarea{
     height: 140px;
 }
 
-.main{
+#main{
+    opacity: 0;
     font-size: 3.5rem;
     letter-spacing: 3px;
     font-weight: 600;
@@ -298,8 +299,6 @@ textarea{
     width: 100%;
     white-space: nowrap;
     overflow: hidden;
-    animation: typing 1.8s steps(21) ,
-               cursor .4s step-end infinite alternate;
 }
 
 @keyframes cursor {
