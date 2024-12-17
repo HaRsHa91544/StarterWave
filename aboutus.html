@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,17 +11,28 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Baumans&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Outfit:wght@100..900&display=swap"
         rel="stylesheet">
+    <style>
+        nav ul li:nth-child(2) a {
+            opacity: 1;
+            pointer-events: none;
+        }
+    </style>
+    <link rel="shortcut icon" href="img/logowb.png" type="image/x-icon">
 </head>
+
 <body style="height: 100vh;">
     <nav>
-        <div id="l1">
-            <a class="logo" href="index.html">
+        <div class="logo-container">
+            <a href="index.php" class="logo-pic">
+                <img src="img/logoww.png" alt="">
+            </a>
+            <a class="logo" href="index.php">
                 <h1>StarterWave</h1>
             </a>
         </div>
         <ul>
             <li>
-                <a href="index.html"><img src="img/house-chimney.png" alt="">Home</a>
+                <a href="index.php"><img src="img/house-chimney.png" alt="">Home</a>
             </li>
             <li>
                 <a href="aboutus.html"><img src="img/info.png" alt="">About Us</a>
@@ -31,7 +43,16 @@
         </ul>
     </nav>
     <div class="cta">
-        <h2 class="main" style="font-weight: 300;">This Page is in Under Construction...!</h2>
+        <h2 id="main" style="font-weight: 300;">This Page is in Under Construction...!</h2>
     </div>
+
+    <script>
+        const cta = document.getElementById('main');
+        window.onload = function () {
+            cta.style.animation = 'typing 1.6s steps(21),cursor .4s step-end infinite alternate';
+            cta.style.opacity = '1';
+        }
+    </script>
 </body>
+
 </html>

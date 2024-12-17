@@ -17,7 +17,7 @@ window.onscroll = function () {
         projh.style.opacity = '1';
         projh.style.animation = 'slideRight 1s both';
     }
-    if (window.scrollY > 1700) {
+    if (window.scrollY > 1800) {
         scards.forEach(card => {
             card.style.animation = 'servani 1.2s both';
             card.style.opacity = '1';
@@ -26,10 +26,10 @@ window.onscroll = function () {
         shead.style.animation = 'slideRight 1s both';
     }
     if(window.scrollY>400){
-        cta.style.animation='typing 1.8s steps(21),cursor .4s step-end infinite alternate';
+        cta.style.animation='typing 1.6s steps(21),cursor .4s step-end infinite alternate';
         cta.style.opacity='1';
     }
-    if (window.scrollY > 30) {
+    if (window.scrollY > 20) {
         sbtn.style.transform = 'translateX(0%) scale(1)';
     }
     else {

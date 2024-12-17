@@ -77,6 +77,8 @@ nav ul a {
     height: fit-content;
     font-size: 1.3rem;
     font-weight: 300;
+    opacity: 0.6;
+    transition: all 0.4s ease-in-out;
 }
 
 nav ul a::after{
@@ -90,8 +92,11 @@ nav ul a::after{
     transition: all 0.3s ease-in-out;
 }
 
+nav ul a:hover{
+    opacity: 1;
+}
 nav ul a:hover::after{
-    width:96%;
+    width:98%;
 }
 
 .mar1{
@@ -105,16 +110,24 @@ nav ul a:hover::after{
     word-spacing: 15px;
     border-bottom: 1px solid var(--bord);
 }
-#l1 {
-    /* background-color: aquamarine; */
+
+.logo-container{
     height: 100%;
-    width: 25%;
+    width: 30%;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-evenly;
+}
+
+.logo-pic{
+    width: 20%;
+}
+.logo-pic img{
+    width: 90%;
 }
 
 .logo {
+    width: 67%;
     text-decoration: none;
     color: white;
 }
@@ -314,9 +327,7 @@ textarea{
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    font-size: 1.6rem;
     line-height: 40px;
-    font-weight: 250;
     height: 400px;
     width: 100%;
     border-bottom:1px solid var(--bord);
@@ -340,6 +351,9 @@ textarea{
     height: 60%;
 }
 .para p{
+    opacity: 0.7;
+    font-size: 1.35rem;
+    font-weight: 250;
     width: 65%;
 }
 
