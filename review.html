@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>StarterWave</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="styles/headres.css">
+  <link rel="stylesheet" href="styles/review.css">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Baumans&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Outfit:wght@100..900&display=swap"
+    rel="stylesheet">
+  <script src="https://kit.fontawesome.com/0fccdfff4a.js" crossorigin="anonymous"></script>
+  <link rel="shortcut icon" href="img/logowb.png" type="image/x-icon">
+</head>
+
+<body>
+  <nav>
+    <div class="logo-container">
+      <a href="index.php" class="logo-pic">
+        <img src="img/logoww.png" alt="">
+      </a>
+      <a class="logo" href="index.php">
+        <h1>StarterWave</h1>
+      </a>
+    </div>
+    <ul>
+      <li>
+        <a href="index.php"><img src="img/house-chimney.png" alt="">Home</a>
+      </li>
+      <li>
+        <a href="aboutus.html"><img src="img/info.png" alt="">About Us</a>
+      </li>
+      <li>
+        <a href="portfolio.html"><img src="img/briefcase.png" alt="">Portfolio</a>
+      </li>
+    </ul>
+  </nav>
+  <ul class="mob-menu">
+    <li>
+      <a href="index.php">
+        <img src="img/house-chimney.png" alt="">
+        <p>Home</p>
+      </a>
+    </li>
+    <li>
+      <a href="aboutus.html">
+        <img src="img/info.png" alt="">
+        <p>About Us</p>
+      </a>
+    </li>
+    <li>
+      <a href="portfolio.html">
+        <img src="img/briefcase.png" alt="">
+        <p>Portfolio</p>
+      </a>
+    </li>
+  </ul>
+  <h1 class="Heading">Love it or hate it, tell us! Help StarterWave ride the right wave. 🌊😂</h1>
+  <form method="post" action="review.php">
+    <input type="text" name="name" placeholder="Name" required>
+    <textarea name="review" id="" cols="30" rows="7" placeholder="How was the talk!" required></textarea>
+    <a href="submit.html" download><button class="s-btn" type="submit">Submit</button></a>
+  </form>
+  <a href="index.php"><button>Visit Website</button></a>
+  <script>
+    const form = document.querySelector('form');
+    form.onsubmit = function () {
+      setTimeout(() => {
+        form.action = 'review.php';
+      }, 2000);
+    }
+  </script>
+</body>
+
+</html>

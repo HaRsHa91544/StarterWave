@@ -11,6 +11,8 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Baumans&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Outfit:wght@100..900&display=swap"
         rel="stylesheet">
+    <link rel="stylesheet" href="styles/headres.css">
+    <link rel="stylesheet" href="styles/indres.css">
     <style>
         body {
             height: 100%;
@@ -43,8 +45,8 @@
         .sub-container h2 {
             font-size: 3rem;
             font-weight: 300;
-            height: 10%;   
-            animation: slideRight 1.2s ease-in-out;
+            height: 10%;
+            animation: paraAni 1.4s ease-in-out;
         }
 
         .sub-container h3 {
@@ -53,8 +55,40 @@
             height: 10%;
             display: flex;
             align-items: center;
-            animation: servani 1.2s ease-in-out both;
-            animation-delay: 1.2s;
+            animation: paraAni 1.2s ease-in-out both;
+            animation-delay: 1s;
+        }
+
+        @keyframes paraAni {
+            from {
+                transform: scale(0.1);
+                filter: blur(100px);
+            }
+
+            to {
+                transform: scale(1);
+                filter: blur(0);
+            }
+        }
+        @media (max-width:1000px){
+            .sub-container{
+                height: 100%;
+                justify-content: stretch;
+            }
+            .sub-container img{
+                width: 70%;
+                height: 45%;
+            }
+            .sub-container h2{
+                height: 15%;
+                font-size: 2rem;
+                text-align: center;
+            }
+            .sub-container h3{
+                height: 30%;
+                width: 90%;
+                text-align: center;
+            }
         }
     </style>
     <link rel="shortcut icon" href="img/logowb.png" type="image/x-icon">
@@ -82,6 +116,26 @@
             </li>
         </ul>
     </nav>
+    <ul class="mob-menu">
+        <li>
+            <a href="index.php">
+                <img src="img/house-chimney.png" alt="">
+                <p>Home</p>
+            </a>
+        </li>
+        <li>
+            <a href="aboutus.html">
+                <img src="img/info.png" alt="">
+                <p>About Us</p>
+            </a>
+        </li>
+        <li>
+            <a href="portfolio.html">
+                <img src="img/briefcase.png" alt="">
+                <p>Portfolio</p>
+            </a>
+        </li>
+    </ul>
     <div class="sub-container">
         <img src="img/submit.gif" alt="" class="submitted-img">
         <h2>We’re Ready to Rise with You!</h2>

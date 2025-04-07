@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -8,6 +10,8 @@
     <link rel="stylesheet" href="styles/index.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="styles/headres.css">
+    <link rel="stylesheet" href="styles/indres.css">
     <link
         href="https://fonts.googleapis.com/css2?family=Baumans&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Outfit:wght@100..900&display=swap"
         rel="stylesheet">
@@ -43,6 +47,26 @@
             </li>
         </ul>
     </nav>
+    <ul class="mob-menu">
+        <li>
+            <a href="index.php" class="active">
+                <img src="img/house-chimney.png" alt="">
+                <p>Home</p>
+            </a>
+        </li>
+        <li>
+            <a href="aboutus.html">
+                <img src="img/info.png" alt="">
+                <p>About Us</p>
+            </a>
+        </li>
+        <li>
+            <a href="portfolio.html">
+                <img src="img/briefcase.png" alt="">
+                <p>Portfolio</p>
+            </a>
+        </li>
+    </ul>
     <marquee class="mar1" direction="" scrollamount="20">&#128680;Limited Time Offer!&#128680;
         Get an Amazing <span style="color: rgb(255, 52, 52);">20% OFF</span> on your Website Cost + 6 months of <span
             style="color: red;">FREE Hosting!</span> Act now this Deal <span style="color: red;">won’t Last Long!</span>
@@ -76,27 +100,38 @@
     </div>
     <div class="con">
         <form action="action.php" method="post">
+            <?php
+                session_start();
+            ?>    
             <div class="input-box">
-                <input type="text" name="name" class="inputs" required>
+                <input type="text" name="name" class="inputs"  value="<?php echo htmlspecialchars($_POST['name'] ?? ''); ?>" required>
                 <span>Name</span>
+                <p style="color:red"><?php echo isset($_SESSION['name']) ? $_SESSION['name'] : ""; ?></p>
             </div>
             <div class="input-box">
-                <input type="tel" name="mobile" placeholder="" class="inputs" required minlength="10" maxlength="10">
+                <input type="tel" name="mobile" placeholder="" class="inputs" value="<?php echo htmlspecialchars($_POST['mobile'] ?? ''); ?>" required>
                 <span>Mobile Number</span>
+                <?php echo isset($_SESSION['mobile']) ? "<p style='color:red;'>{$_SESSION['mobile']}</p>" : ""; ?>
             </div>
             <div class="input-box">
-                <input type="email" name="mail" placeholder="" class="inputs" required>
+                <input type="email" name="mail" placeholder="" class="inputs"  value="<?php echo htmlspecialchars($_POST['mail'] ?? ''); ?>" required>
                 <span>Email</span>
+                <?php echo isset($_SESSION['email']) ? "<p style='color:red;'>{$_SESSION['email']}</p>" : ""; ?>
             </div>
             <div class="input-box">
-                <input type="text" name="project" placeholder="" class="inputs" required>
+                <input type="text" name="project" placeholder="" class="inputs"  value="<?php echo htmlspecialchars($_POST['project'] ?? ''); ?>" required>
                 <span>Project Name</span>
+                <?php echo isset($_SESSION['project_name']) ? "<p style='color:red;'>{$_SESSION['project_name']}</p>" : ""; ?>
             </div>
             <div class="input-box">
-                <textarea name="description" placeholder="" class="inputs" required></textarea>
+                <textarea name="description" placeholder="" class="inputs"  value="<?php echo htmlspecialchars($_POST['description'] ?? ''); ?>" required></textarea>
                 <span>Describe about the project</span>
+                <?php echo isset($_SESSION['project_description']) ? "<p style='color:red;'>{$_SESSION['project_description']}</p>" : ""; ?>
             </div>
-            <button type="submit" value="Submit" id="sub">Submit</button>
+            <?php
+                session_destroy();
+            ?>    
+            <button type="submit" value="Submit" id="sub" name="submit">Submit</button>
         </form>
     </div>
     <button onclick="toScroll()" class="scroll-btn" id="sbtn">Rise with Us!</button>
@@ -168,6 +203,7 @@
                     class="fa-brands fa-whatsapp"></i></a>
             <a href="https://www.linkedin.com/in/k-harsha-vardhan9/" target="_blank"><i
                     class="fa-brands fa-linkedin-in"></i></a>
+            <a href="https://www.instagram.com/starterwave25" target="_blank"><i class="fa-brands fa-instagram"></i></a>
         </div>
         <div class="contact">
             <h2>Contact Us:</h2>

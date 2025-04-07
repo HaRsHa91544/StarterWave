@@ -5,22 +5,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>StarterWave</title>
-    <link rel="stylesheet" href="styles/index.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Baumans&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Outfit:wght@100..900&display=swap"
         rel="stylesheet">
+    <link rel="stylesheet" href="styles/headres.css">
+    <link rel="stylesheet" href="styles/Aboutus.css">
     <style>
         nav ul li:nth-child(2) a {
             opacity: 1;
             pointer-events: none;
         }
     </style>
+    <script src="https://kit.fontawesome.com/0fccdfff4a.js" crossorigin="anonymous"></script>
     <link rel="shortcut icon" href="img/logowb.png" type="image/x-icon">
 </head>
 
-<body style="height: 100vh;">
+<body>
     <nav>
         <div class="logo-container">
             <a href="index.php" class="logo-pic">
@@ -42,17 +44,112 @@
             </li>
         </ul>
     </nav>
-    <div class="cta">
-        <h2 id="main" style="font-weight: 300;">This Page is in Under Construction...!</h2>
+    <ul class="mob-menu">
+        <li>
+            <a href="index.php">
+                <img src="img/house-chimney.png" alt="">
+                <p>Home</p>
+            </a>
+        </li>
+        <li>
+            <a href="aboutus.html" class="active">
+                <img src="img/info.png" alt="">
+                <p>About Us</p>
+            </a>
+        </li>
+        <li>
+            <a href="portfolio.html">
+                <img src="img/briefcase.png" alt="">
+                <p>Portfolio</p>
+            </a>
+        </li>
+    </ul>
+    <marquee class="mar1" direction="" scrollamount="10">&#128680;Limited Time Offer!&#128680;
+        Get an Amazing <span style="color: rgb(255, 52, 52);">20% OFF</span> on your Website Cost + 6 months of <span
+            style="color: red;">FREE Hosting!</span> Act now this Deal <span style="color: red;">won’t Last Long!</span>
+    </marquee>
+    <a href="index.php" class="home-btn">
+        <button>Rise with Us!</button>
+    </a>
+    <div class="firstdiv">
+        <div class="hea">
+            <h2>Who we are?</h2>
+        </div>
+        <div class="pa">
+            <div class="pad">
+                <p> We are all diploma aspirants and very intersted to build the websites that empowers our client
+                    businesses.
+                </p>
+                <p>
+                    Our commitment to quality and innovation ensures that our work can definitely reaches the
+                    client expectations.</p>
+            </div>
+            <div class="imgd">
+                <img src="img/human-group-with-questions-and-doubts.png" alt="">
+            </div>
+        </div>
     </div>
+    <div class="seconddiv">
+        <div class="heat">
+            <h2>Our Mission</h2>
+        </div>
+        <div class="pat">
+            <div class="padt">
+                <p> The projects we build are tailored for startups and small businesses, offering affordable solutions
+                    that support and sustain them throughout their business journey.
+                </p>
+                <p>
+                    And our aim is to rise our client 's business performance in digital world through our
+                    excellence services.</p>
+            </div>
+            <div class="imgd">
+                <img src="img/target.png" alt="">
+            </div>
+        </div>
+    </div>
+    <div class="thirddiv">
+        <div class="heath">
+            <h2>Our Services</h2>
+        </div>
+        <div class="path">
+            <div class="padth">
+                <p>
+                    <span>Front-End: &nbsp;</span> We specialize in creating interactive and visually stunning websites
+                    technologies
+                    like HTML, CSS,
+                    JavaScript, React JS,etc.
+                </p>
+                <p> <span>Back-End: &nbsp;</span>
+                    We implement server-side interactions to ensure seamless user experiences using technologies like
+                    PHP, MySQL, MongoDB.</p>
 
-    <script>
-        const cta = document.getElementById('main');
-        window.onload = function () {
-            cta.style.animation = 'typing 1.6s steps(21),cursor .4s step-end infinite alternate';
-            cta.style.opacity = '1';
-        }
-    </script>
+                <p><span>Digital marketing: &nbsp;</span>
+                    We design websites optimized for top performance in search engine results and social media platforms
+                    using key SEO, SEM, and Social Media Marketing to help our clients achieve greater
+                    visibility and engagement.
+                </p>
+            </div>
+        </div>
+    </div>
+    <footer id="footer">
+        <a href="index.php" class="flogo">
+            <h1>StarterWave</h1>
+        </a>
+        <div class="social">
+            <h2>Social Media:</h2>
+            <a href="https://wa.me/9014709040?text=Hi%20,Let's%20Rise%20Together%20!" target="_blank"><i
+                    class="fa-brands fa-whatsapp"></i></a>
+            <a href="https://www.linkedin.com/in/k-harsha-vardhan9/" target="_blank"><i
+                    class="fa-brands fa-linkedin-in"></i></a>
+            <a href="https://www.instagram.com/starterwave25" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+        </div>
+        <div class="contact">
+            <h2>Contact Us:</h2>
+            <a href="tel:+91 9398927019">+91 9398927019</a>
+            <a href="tel:+91 7981629173">+91 7981629173</a>
+            <a href="mailto:harshamahitha2079@gmail.com">starterwave25@gmail.com</a>
+        </div>
+    </footer>
 </body>
 
 </html>
