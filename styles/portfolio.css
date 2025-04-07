@@ -1,0 +1,210 @@
+body{
+    display: flex;
+    justify-content: space-around;
+    height: max-content;
+}
+
+.rev-container,.budg-container,.food-container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    border-bottom: 1px solid var(--bord);
+}
+
+.rev-container{
+    min-height: 50vw;
+}
+
+.budg-container{
+    min-height: 80vw;
+}
+
+.food-container{
+    min-height: 80vw;
+}
+
+.rev-container h2,.budg-container h2,.food-container h2{
+    font-size: 2.5rem;
+    font-weight: 200;
+}
+
+.rev-img{
+    cursor: pointer;
+    width: 98%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1.5vw;
+    grid-template-areas: 
+    "box-1 box-2 box-3"
+    "box-4 box-2 box-3"
+    "box-4 box-2 box-6"
+    "box-4 box-5 box-6"
+    ;
+}
+
+.budg-img{
+    cursor: pointer;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: 
+    "budg-1 budg-1 budg-2"
+    "budg-1 budg-1 budg-3"
+    "budg-4 budg-5 budg-5"
+    ;
+    width: 95%;
+    gap: 1.5vw;
+}
+
+.food-img{
+    cursor: pointer;
+    display: grid;
+    gap: 1.5vw;
+    width: 95%;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: 
+    "food-1 food-2 food-2"
+    "food-3 food-2 food-2"
+    "food-3 food-4 food-4"
+    ;
+}
+
+.img-con{
+    border: 1px solid white;
+    transition: all 0.3s ease-in-out;
+    border-radius: 8px;
+    box-shadow: 1px 1px 5px rgba(255, 255, 255, 0.4);
+}
+
+.img-con img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.img-con:hover{
+    box-shadow: 2px 2px 20px rgba(255, 255, 255, 0.8);
+}
+
+.home-btn{
+    width: fit-content;
+    height: fit-content;
+}
+
+.home-btn button{
+    transition: all 1s ease-in-out;
+    z-index: 10000;
+    position: fixed;
+    right: 30px;
+    bottom: 20px;
+    padding: 10px 20px;
+    box-sizing: border-box;
+    background-color: black;
+    font-size: 1.3rem;
+    border: 1px solid transparent;
+    cursor: pointer;
+    color:white;
+    font-weight: 250;
+    border: 1px solid white;
+}
+
+.home-btn button:hover,.home-btn button:active{
+    box-shadow: 1px 1px 12px rgba(255, 255, 255, 0.8);
+}
+
+.slider{
+    position: fixed;
+    top: 55%;
+    background-color: rgba(0, 0, 0, 0.61);
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    visibility: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease-in-out;
+    z-index: 100;
+}
+
+.slide-btn{
+    height: 7.5%;
+    width: 4%;
+    cursor: pointer;
+    border-radius: 100%;
+    border: 1px solid white;
+    box-shadow: 1px 1px 12px rgba(255, 255, 255, 0.8);
+    transition: all 0.3s ease-in-out;
+}
+
+#slide-img{
+    width: 70%;
+    height: 70%;
+    border: 1px solid white;
+    box-shadow: 2px 2px 20px rgba(255, 255, 255, 0.8);
+}
+
+#slide-close{
+    border-radius: 100%;
+    width: 3%;
+    height: 5.5%;
+    position: absolute;
+    border: 1px solid white;
+    right: 4%;
+    top: 10%;
+    box-shadow: 1px 1px 20px rgba(255, 255, 255, 0.8);
+    cursor: pointer;
+}
+
+@media (max-width:1000px){
+    .home-btn button{
+        padding: 5px 10px;
+        font-size: 1rem;
+        bottom: 15%;
+        right: 5%;
+    }   
+    .rev-container{
+        width: 98%;
+        min-height: 70vw;
+    }
+    
+    .budg-container{
+        width: 98%;
+        min-height: 90vw;
+    }
+    
+    .food-container{
+        width: 98%;
+        min-height: 90vw;
+    }
+    .rev-container h2,.budg-container h2,.food-container h2{
+        font-size: 1.6rem;
+    }
+    .slider{
+        top: 50%;
+        height: 100%;
+    }
+    #slide-img{
+        height: 55vw;
+        width: 98%;
+    }
+    .slide-btn{
+        position: absolute;
+        height: 5vw;
+        width: 5%;
+        right: 3%;
+    }    
+    .slide-btn:first-child{
+        left: 3%;
+    }
+    #slide-close{
+        top: 15%;
+        height: 9vw;
+        width: 9%;
+    }
+}

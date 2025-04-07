@@ -1,0 +1,423 @@
+:root{
+    --bord:rgb(113, 113, 113);
+}
+
+* {
+    color: white;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Outfit';
+    letter-spacing: 2px;
+}
+
+html,body {
+    scrollbar-width:thin;
+    scrollbar-color: black white;
+    scrollbar-arrow-color: black;
+    scroll-behavior: smooth;
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    -webkit-tap-highlight-color: transparent;
+    padding-top: 90px;
+    background:linear-gradient(to top,rgb(36, 36, 36),black,rgb(36, 36, 36));
+}
+
+.mob-menu{
+    display: none;
+}
+
+@keyframes fadeInOut {
+    0% {
+        opacity: 0;
+        display: none;
+    }
+
+    50% {
+        opacity: 0.3;
+        display: flex;
+    }
+
+    100% {
+        opacity: 1;
+        display: flex;
+    }
+}
+
+li {
+    list-style: none;
+}
+
+nav {
+    z-index: 1000;
+    background-color: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(5px);
+    top: 0;
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 90px;
+    align-items: center;
+    border-bottom: 1px solid var(--bord);
+}
+
+ul {
+    /* background-color: aqua; */
+    width: 40%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 30px;
+
+}
+
+nav ul li {
+    /* background-color: rgb(43, 214, 13); */
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+nav ul li img{
+    width: 18px;
+    margin-right: 7px;
+}
+nav ul a {
+    display: flex;
+    align-items: center;
+    position: relative;
+    text-decoration: none;
+    color: white;
+    height: fit-content;
+    font-size: 1.3rem;
+    font-weight: 300;
+    opacity: 0.6;
+    transition: all 0.4s ease-in-out;
+}
+
+nav ul a::after{
+    position: absolute;
+    content: '';
+    width: 0%;
+    height: 2%;
+    background-color: white;
+    bottom: -2px;
+    left: 0;
+    transition: all 0.3s ease-in-out;
+}
+
+button {
+    -webkit-tap-highlight-color: transparent;
+}
+
+nav ul a:hover{
+    opacity: 1;
+}
+nav ul a:hover::after{
+    width:98%;
+}
+
+.menu-container{
+    display: none;
+}
+
+
+.logo-container{
+    height: 100%;
+    width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.logo-pic{
+    width: 20%;
+}
+.logo-pic img{
+    width: 80%;
+}
+
+.logo {
+    width: 67%;
+    text-decoration: none;
+    color: white;
+}
+
+.logo h1,footer a h1{
+    font-size: 3rem;
+    font-weight: 100;
+}
+
+a{
+    text-decoration: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.mar1{
+    height: 60px;
+    background-color: white;
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.6rem;
+    word-spacing: 15px;
+    border-bottom: 1px solid var(--bord);
+}
+
+footer{
+    width: 100%;
+    height: 200px;
+    background-color: black;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size:cover;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.contact{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 80%;
+    width: 30%;
+}
+.contact h2,footer .social h2{
+    font-size: 1.8rem;
+    font-weight: 500;
+}
+.contact a{
+    font-size: 1.2rem;
+    font-weight: 300;
+    position: relative;
+    width: fit-content;
+}
+.contact a::after{
+    content: '';
+    position: absolute;
+    background-color: white;
+    width: 0%;
+    bottom: 0;
+    left: 0;
+    height: 2%;
+    transition: all 0.3s ease-in-out;
+}
+.contact a:hover::after{
+    width: 100%;
+}
+footer .flogo{
+    width: 20%;
+    align-items: center;
+}
+footer .flogo h1{
+    display: inline;
+}
+footer .social{
+    width: 20%;
+}
+footer .social i{
+    margin-top: 20px;
+    margin-right: 20px;
+    font-size: 1.8rem;
+    opacity: 0.6;
+    transition: all 0.3s ease-in-out;
+}
+footer .social i:hover{
+    opacity: 1;
+}
+footer .social a{
+    display: inline;
+}
+::selection{
+    background-color: white;
+    color: black;
+}
+@media (max-width:1000px){
+    nav{
+        height: 80px;
+    }
+    html,body{
+        overflow-x: hidden;
+    }
+    body{
+        position: relative;
+        padding-top: 80px;
+        padding-bottom: 10%;
+    }
+    nav{
+        width: 100%;
+        height: 70px;
+    }
+    nav ul{
+        z-index: 1000;
+        display: none;
+    }
+    nav ul li{
+        width: 100%;
+        height: 10%;
+        justify-content: center;
+    }
+    nav ul li a{
+        opacity: 1;
+    }
+    .logo-container{
+        width: 100%;
+    }
+    .logo h1{
+        font-size: 2rem;
+    }
+    .logo-pic{
+        width: 30%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .logo-pic img{
+        width: 40%;
+        object-fit: cover;
+    }
+    .logo{
+        width: 70%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .mob-menu{
+        z-index: 1000;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: fixed;
+        width: 100%;
+        height: 10%;
+        background-color: black;
+        bottom: 0;
+        border-top:1px solid var(--bord);
+    }
+    .mob-menu li{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+    }
+    .mob-menu img{
+        width: 15%;
+    }
+    .mob-menu li a{
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        flex-direction: column;
+        font-size: 0.8rem;
+        opacity: 0.4;
+        height: 80%;
+        font-weight: 300;
+        transition: all 0.3s ease-in-out;
+    }
+    .mob-menu li a:active{
+        opacity: 1;
+    }
+    .mob-menu p{
+        display: inline;
+    }
+    .scroll-btn{
+        padding: 5px 10px;
+        font-size: 1rem;
+        bottom: 15%;
+        right: 5%;
+    }
+    .mob-menu .active{
+        pointer-events: none;
+        opacity: 1;
+        font-size: 1rem;
+    }
+    .mob-menu .active img{
+        width: 18%;
+    }
+    footer{
+        height: 100vw;
+        flex-direction: column;
+        align-items: center;
+        justify-content:space-around;
+    }
+    footer .flogo{
+        height: 10%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: fit-content;
+    }
+    .flogo h1{
+        width: 100%;
+        display: block;
+        text-align: center;
+    }
+    .contact,footer .social{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: space-around;
+        height: 30%;
+        width: 100%;
+    }
+    .contact h2,footer .social h2{
+        font-size: 1.7rem;
+    }
+}
+
+
+
+@media (max-width:550px){
+    html,body{
+        overflow-x: hidden;
+    }
+    body{
+        position: relative;
+        padding-top: 70px;
+    }
+    nav{
+        width: 100%;
+        height: 70px;
+    }
+    nav ul li a{
+        opacity: 1;
+    }
+    .logo-container{
+        width: 100%;
+    }
+    .logo h1{
+        font-size: 2.3rem;
+    }
+    .logo-pic{
+        width: 30%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .logo-pic img{
+        width: 50%;
+        object-fit: cover;
+    }
+    .logo{
+        width: 70%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .mar1{
+        height: 40px;
+        font-size: 1rem;
+    }
+    footer{
+        height: 160vw;
+    }
+}

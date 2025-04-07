@@ -1,0 +1,143 @@
+@media (max-width:1000px) {
+
+    .para {
+        height: max-content;
+        flex-direction: column;
+        align-items: center;
+        padding: 15px 0px;
+    }
+
+    .p-head {
+        width: 100%;
+        text-align: center;
+
+        h2 {
+            font-size: 2rem;
+        }
+    }
+
+    .pcont {
+        width: 100%;
+        flex-direction: column;
+
+        p {
+            font-size: 1.1rem;
+            text-align: center;
+            width: 93%;
+        }
+
+        img {
+            width: 40%;
+        }
+    }
+
+    .cta {
+        width: fit-content;
+        height: 7%;
+    }
+    form{
+        height: 93%;
+        justify-content: space-around;
+    }
+
+    #main {
+        font-size: 1.8rem;
+    }
+
+    form .input-box,
+    #sub {
+        width: 80%;
+    }
+
+    form .input {
+        padding: 12px 6px;
+        font-size: 1.1rem;
+    }
+
+    .input-box span {
+        font-size: 1.1rem;
+    }
+
+    .projects {
+        height: 200vw;
+        justify-content: space-between;
+    }
+
+    .projects h2 {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        font-size: 2.5rem;
+        height: 10%;
+    }
+
+    .proj-cont {
+        height: 90%;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+
+    .proj-card {
+        padding: 0 0;
+        width: 75%;
+        height: 30%;
+        justify-content: space-evenly;
+    }
+
+    .proj-card img {
+        opacity: 1;
+        width: 50%;
+        object-fit: cover;
+    }
+
+    .proj-card h3 {
+        font-size: 1.7rem;
+        text-align: center;
+        width: 100%;
+        opacity: 1;
+        white-space: nowrap;
+    }
+
+    .proj-card:active {
+        border: 1px solid white;
+        box-shadow: 1px 1px 12px rgba(255, 255, 255, 0.4);
+    }
+    .services{
+        height: 250vw;
+        justify-content: space-around;
+    }
+    .services h2{
+        width: 100%;
+        text-align: center;
+        justify-content: center;
+        height: 5%;
+        font-size: 2.5rem;
+    }
+    .serv-container{
+        height: 90%;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+    .service{
+        height: 25%;
+        width: 90%;
+        border: 1px solid white;
+    box-shadow: 1px 1px 7px rgba(255, 255, 255, 0.4);
+    }
+    .service h3{
+        height: 40%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.3rem;
+    }
+    .serv-img{
+        height: 60%;
+    }
+    .serv-img img{
+        width: 20%;
+        opacity: 1;
+    }
+}
