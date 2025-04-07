@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StarterWave</title>
+    <link rel="stylesheet" href="styles/index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Baumans&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Outfit:wght@100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles/headres.css">
+    <link rel="stylesheet" href="styles/indres.css">
+    <style>
+        body {
+            height: 100%;
+            justify-content: space-around;
+        }
+
+        html {
+            height: 100%;
+        }
+
+        nav ul li:nth-child(1) a {
+            opacity: 1;
+            pointer-events: none;
+        }
+
+        .sub-container {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            height: 100%;
+            justify-content: space-around;
+        }
+
+        .submitted-img {
+            width: 40%;
+            height: 80%;
+        }
+
+        .sub-container h2 {
+            font-size: 3rem;
+            font-weight: 300;
+            height: 10%;
+            animation: paraAni 1.4s ease-in-out;
+        }
+
+        .sub-container h3 {
+            font-size: 1.3rem;
+            font-weight: 200;
+            height: 10%;
+            display: flex;
+            align-items: center;
+            animation: paraAni 1.2s ease-in-out both;
+            animation-delay: 1s;
+        }
+
+        @keyframes paraAni {
+            from {
+                transform: scale(0.1);
+                filter: blur(100px);
+            }
+
+            to {
+                transform: scale(1);
+                filter: blur(0);
+            }
+        }
+        @media (max-width:1000px){
+            .sub-container{
+                height: 100%;
+                justify-content: stretch;
+            }
+            .sub-container img{
+                width: 70%;
+                height: 45%;
+            }
+            .sub-container h2{
+                height: 15%;
+                font-size: 2rem;
+                text-align: center;
+            }
+            .sub-container h3{
+                height: 30%;
+                width: 90%;
+                text-align: center;
+            }
+        }
+    </style>
+    <link rel="shortcut icon" href="img/logowb.png" type="image/x-icon">
+</head>
+
+<body style="height: 100%;">
+    <nav>
+        <div class="logo-container">
+            <a href="index.php" class="logo-pic">
+                <img src="img/logoww.png" alt="">
+            </a>
+            <a class="logo" href="index.php">
+                <h1>StarterWave</h1>
+            </a>
+        </div>
+        <ul>
+            <li>
+                <a href="index.php"><img src="img/house-chimney.png" alt="">Home</a>
+            </li>
+            <li>
+                <a href="aboutus.html"><img src="img/info.png" alt="">About Us</a>
+            </li>
+            <li>
+                <a href="portfolio.html"><img src="img/briefcase.png" alt="">Portfolio</a>
+            </li>
+        </ul>
+    </nav>
+    <ul class="mob-menu">
+        <li>
+            <a href="index.php">
+                <img src="img/house-chimney.png" alt="">
+                <p>Home</p>
+            </a>
+        </li>
+        <li>
+            <a href="aboutus.html">
+                <img src="img/info.png" alt="">
+                <p>About Us</p>
+            </a>
+        </li>
+        <li>
+            <a href="portfolio.html">
+                <img src="img/briefcase.png" alt="">
+                <p>Portfolio</p>
+            </a>
+        </li>
+    </ul>
+    <div class="sub-container">
+        <img src="img/submit.gif" alt="" class="submitted-img">
+        <h2>We’re Ready to Rise with You!</h2>
+        <h3>We’ve received your request and can’t wait to assist you. Our team will get back to you shortly to take
+            things forward.</h3>
+    </div>
+</body>
+
+</html>
